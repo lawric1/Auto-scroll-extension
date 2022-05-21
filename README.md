@@ -1,3 +1,3 @@
 # Auto scroll extension
 
-Add youtube dislike count to videos. (Since youtube removed the dislikes from their api, It's now working anymore)
+Browser extension - Add a widget when page is loaded that controls auto scrolling
