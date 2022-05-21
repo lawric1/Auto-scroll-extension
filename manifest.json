@@ -1,0 +1,43 @@
+{
+    "name": "Auto Scroller",
+    "description": "While active, add a widget to the current page to control autoscrolling.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "64": "/images/icon-32x32.png",
+        "128": "/images/icon-64x64.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["insert.css"],
+        "js": ["insert.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+        "default_icon": {
+            "64": "/images/icon-32x32.png",
+            "128": "/images/icon-64x64.png"
+        },
+        "default_title": "Auto Scroller"
+    },
+
+    "web_accessible_resources": [
+        {
+            "resources": ["/images/*"],
+            "matches": [ "<all_urls>" ]
+        }
+    ]
+}
